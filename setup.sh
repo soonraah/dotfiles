@@ -1,6 +1,8 @@
 
 #!/bin/sh
 
+cd ~/dotfiles
+
 if [ ! -L ~/.zprezto -a -d ~/dotfiles/prezto ]; then
     ln -s ~/dotfiles/prezto ~/.zprezto
 fi
