@@ -18,4 +18,7 @@ for file in .*; do
 done
 
 # for tmux copy mode
-brew install reattach-to-user-namespace
+if [ `uname` = "Darwin" ]; then
+    echo 'This is MacOS. Installing reattach-to-user-namespace by homebrew'
+    brew install reattach-to-user-namespace
+fi
