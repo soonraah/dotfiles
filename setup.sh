@@ -16,3 +16,6 @@ for file in .*; do
     rm -f -i ~/$file
     ln -s ~/dotfiles/$file ~/$file
 done
+
+# for tmux copy mode
+brew install reattach-to-user-namespace
