@@ -44,6 +44,7 @@ typeset -gU cdpath fpath mailpath path
 # Set the list of directories that Zsh searches for programs.
 path=(
   $HOME/anaconda3/bin(N-/)
+  $HOME/.poetry/bin
   /usr/local/{bin,sbin}
   $path
 )
@@ -73,3 +74,4 @@ if [[ ! -d "$TMPDIR" ]]; then
 fi
 
 TMPPREFIX="${TMPDIR%/}/zsh"
+eval "$(/opt/homebrew/bin/brew shellenv)"
