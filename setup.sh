@@ -14,7 +14,7 @@ for file in .*; do
     if [[ $file =~ ^\.git || $file =~ ^\.\.?$ ]]; then
         continue
     fi
-    echo "Making linke of $file"
+    echo "Making link of $file"
     rm -f -i ~/$file
     ln -s ~/dotfiles/$file ~/$file
 done
