@@ -14,7 +14,9 @@ for file in .*; do
         continue
     fi
     echo "Making link of $file"
-    rm -f -i ~/$file
+    if [ -e ~/$file ]; then
+        rm -f -i ~/$file
+    fi
     ln -s ~/dotfiles/$file ~/$file
 done
 
@@ -39,5 +41,7 @@ sh -c "$(curl -fsSL https://git.io/get-zi)" --
 if [ ! -d ~/.config ]; then
     mkdir ~/.config
 fi
-rm -f -i ~/.config/starship.toml
+if [ -e ~/.config/starship.toml ]; then
+    rm -f -i ~/.config/starship.toml
+fi
 ln -s ~/dotfiles/starship.toml ~/.config/starship.toml
